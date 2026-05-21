@@ -1,7 +1,7 @@
 import re
 
 def normalize_phone(phone_number: str) -> str:
-    # Залишаємо тільки цифри та плюс
+    # Leaving only numbers and plus
     cleaned = re.sub(r"[^\d+]", "", phone_number)
 
     # If the nuber starts with '+'
@@ -20,7 +20,7 @@ def normalize_phone(phone_number: str) -> str:
         return "+" + cleaned
 
     # If the number starts with '0' or just numbers, add +38
-    
+
     return "+38" + cleaned
 
 raw_numbers = [
